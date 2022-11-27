@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto&family=Silkscreen:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto&family=Montserrat&family=Silkscreen:wght@700&display=swap');
 
 /* ------- global ------- */
 * {
@@ -53,35 +53,53 @@ main {
 }
 
 /* ---- calculator ---- */
-table {
-  background-color: rgb(85, 85, 85);
-  border-radius: 10px;
+.calc-container {
+  background-color:rgb(94, 94, 94);
+  max-width: 400px;
   margin: auto;
   padding: 10px;
+  border-radius: 20px;
+}
+
+.row {
+  width: 100%;
+  margin-bottom: 4px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 4px;
 }
 
 input[type="button"] {
   background-color: rgb(222, 224, 222);
-  border: none;
+  border: 0;
+  border-bottom: 3px solid rgb(51, 51, 51);
   border-radius: 0px;
-  font-family: 'Fredoka One', sans-serif;
-  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
   font-weight: bold;
   padding: 20px 30px;
-  width: 100%;
+  flex: 0 1 100%;
+  border-radius: 10px;
 }
 
 input[type="button"]:hover {
   background-color: rgb(239, 243, 239);
+  transform: translateY(1px);
+  border-bottom: 2px solid rgb(51, 51, 51);
 }
 
 input[type="text"] {
+  background-color: rgb(44, 44, 44);
   border: none;
-  border-radius: 0px;
-  font-family: 'Fredoka One', sans-serif;
+  border-radius: 10px;
+  color: rgb(248, 170, 106);
+  font-family: 'Montserrat', sans-serif;
   font-size: 24px;
   font-weight: bold;
   padding: 20px;
+  width: 100%;
+  text-align: right;
+  letter-spacing: 2px;
 }
 
 input[type="text"]:focus {
@@ -92,8 +110,12 @@ input[type="button"].operators {
   background-color: rgb(173, 182, 182);
 }
 
+input[type="button"].operators:hover {
+  background-color: rgb(165, 172, 172);
+}
+
 input[type="button"].equals {
-  background-color: rgb(145, 206, 155);
+  background-color: rgb(248, 170, 106);
 }
 
 input[type="button"].clear {

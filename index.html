@@ -25,52 +25,62 @@
     <div class="section-1">
       <div class="section-contents">
 
-        <!-- calculator table -->
-        <table id="calculator">
-          <tr>
-            <td colspan="3"><input type="text" id="result"></td>
-            <td><input type="button" value="/" onclick="display('/')"
-              onkeydown="numberBtn(event)" class="operators"> </td>
-          </tr>
-          <tr>
-            <td><input type="button" value="1" onclick="display('1')"
-              onkeydown="numberBtn(event)"> </td>
-            <td><input type="button" value="2" onclick="display('2')"
-              onkeydown="numberBtn(event)"> </td>
-            <td><input type="button" value="3" onclick="display('3')"
-              onkeydown="numberBtn(event)"> </td>
-            <td><input type="button" value="*" onclick="display('*')" class="operators"
-              onkeydown="numberBtn(event)"> </td>
-            </tr>
-          <tr>
-            <td><input type="button" value="4" onclick="display('4')"
-              onkeydown="numberBtn(event)"> </td>
-            <td><input type="button" value="5" onclick="display('5')"
-              onkeydown="numberBtn(event)"> </td>
-            <td><input type="button" value="6" onclick="display('6')"
-              onkeydown="numberBtn(event)"> </td>
-            <td><input type="button" value="-" onclick="display('-')" class="operators"
-              onkeydown="numberBtn(event)" > </td>
-          </tr>
-          <tr>
-            <td><input type="button" value="7" onclick="display('7')"
-              onkeydown="numberBtn(event)"> </td>
-            <td><input type="button" value="8" onclick="display('8')"
-              onkeydown="numberBtn(event)"> </td>
-            <td><input type="button" value="9" onclick="display('9')"
-              onkeydown="numberBtn(event)"> </td>
-            <td><input type="button" value="+" onclick="display('+')" class="operators"
-              onkeydown="numberBtn(event)"> </td>
-          </tr>
-          <tr>
-            <td><input type="button" value="c" onclick="clr()" class="clear" /> </td>
-            <td><input type="button" value="0" onclick="display('0')"
-              onkeydown="numberBtn(event)"> </td>
-            <td><input type="button" value="." onclick="display('.')"
-              onkeydown="numberBtn(event)"> </td>
-            <td><input type="button" value="=" onclick="solve()" class="equals"> </td>
-          </tr>
-        </table>
+        <!-- calculator -->
+        <div class="calc-container">
+          
+          <div class="row">
+            <input type="text" id="result">
+          </div>
+
+          <div class="row">
+            <input type="button" value="1" onclick="display('1')"
+              onkeydown="numberBtn(event)">
+            <input type="button" value="2" onclick="display('2')"
+              onkeydown="numberBtn(event)">
+            <input type="button" value="3" onclick="display('3')"
+              onkeydown="numberBtn(event)">
+            <input type="button" value="*" onclick="display('*')" class="operators"
+              onkeydown="numberBtn(event)">
+          </div>
+
+          <div class="row">
+            <input type="button" value="4" onclick="display('4')"
+              onkeydown="numberBtn(event)">
+            <input type="button" value="5" onclick="display('5')"
+              onkeydown="numberBtn(event)">
+            <input type="button" value="6" onclick="display('6')"
+              onkeydown="numberBtn(event)">
+            <input type="button" value="-" onclick="display('-')" class="operators"
+              onkeydown="numberBtn(event)" >
+          </div>
+
+          <div class="row">
+            <input type="button" value="7" onclick="display('7')"
+              onkeydown="numberBtn(event)">
+            <input type="button" value="8" onclick="display('8')"
+              onkeydown="numberBtn(event)">
+            <input type="button" value="9" onclick="display('9')"
+              onkeydown="numberBtn(event)">
+            <input type="button" value="+" onclick="display('+')" class="operators"
+              onkeydown="numberBtn(event)">
+          </div>
+
+          <div class="row">
+            <input type="button" value="C" onclick="clr()" class="clear" />
+            <input type="button" value="0" onclick="display('0')"
+              onkeydown="numberBtn(event)">
+            <input type="button" value="." onclick="display('.')"
+              onkeydown="numberBtn(event)">
+            <input type="button" value="/" onclick="display('/')" class="operators"
+              onkeydown="numberBtn(event)" >
+          </div>
+          
+          <div class="row">
+            <input type="button" value="=" onclick="solve()" class="equals">
+          </div>
+
+        </div>
+
       </div>
     </div>
   </main>

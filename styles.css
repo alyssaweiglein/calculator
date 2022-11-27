@@ -7,6 +7,10 @@
   padding: 0;
 }
 
+*[x-apple-data-detectors] {
+  color: inherit !important;
+}
+
 html {
   min-height: 100%;
   position: relative;
@@ -80,6 +84,7 @@ input[type="button"] {
   padding: 20px 30px;
   flex: 0 1 100%;
   border-radius: 10px;
+  min-height: 60px;
 }
 
 input[type="button"]:hover {

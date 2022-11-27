@@ -5,21 +5,87 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  <!-- favicon -->
+  <link rel="icon" type="image/x-icon" href="icons8-calculator-48.png">
+  <!-- fontawesome icons -->
+  <script src="https://kit.fontawesome.com/67b26fcce6.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"integrity="sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js" integrity="sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <title>Calculator</title>
 </head>
 <body>
+  <!-- header-->
   <header>
-    <h1>Calculator</h1>
+    <h1 class="title">Calculator</h1>
   </header>
 
-  <div id="main">
-    <table id="calcu">
-      <tr>
-        <td colspan "3"><input type="text"></td>
-        <td><input type="button"/></td>
-      </tr>
-    </table>
-  </div>
+  <!-- main content -->
+  <main>
+    <!-- section-1 -->
+    <div class="section-1">
+      <div class="section-contents">
+
+        <!-- calculator table -->
+        <table id="calculator">
+          <tr>
+            <td colspan="3"><input type="text" id="result"></td>
+            <td><input type="button" value="/" onclick="display('/')"
+              onkeydown="numberBtn(event)" class="operators"> </td>
+          </tr>
+          <tr>
+            <td><input type="button" value="1" onclick="display('1')"
+              onkeydown="numberBtn(event)"> </td>
+            <td><input type="button" value="2" onclick="display('2')"
+              onkeydown="numberBtn(event)"> </td>
+            <td><input type="button" value="3" onclick="display('3')"
+              onkeydown="numberBtn(event)"> </td>
+            <td><input type="button" value="*" onclick="display('*')" class="operators"
+              onkeydown="numberBtn(event)"> </td>
+            </tr>
+          <tr>
+            <td><input type="button" value="4" onclick="display('4')"
+              onkeydown="numberBtn(event)"> </td>
+            <td><input type="button" value="5" onclick="display('5')"
+              onkeydown="numberBtn(event)"> </td>
+            <td><input type="button" value="6" onclick="display('6')"
+              onkeydown="numberBtn(event)"> </td>
+            <td><input type="button" value="-" onclick="display('-')" class="operators"
+              onkeydown="numberBtn(event)" > </td>
+          </tr>
+          <tr>
+            <td><input type="button" value="7" onclick="display('7')"
+              onkeydown="numberBtn(event)"> </td>
+            <td><input type="button" value="8" onclick="display('8')"
+              onkeydown="numberBtn(event)"> </td>
+            <td><input type="button" value="9" onclick="display('9')"
+              onkeydown="numberBtn(event)"> </td>
+            <td><input type="button" value="+" onclick="display('+')" class="operators"
+              onkeydown="numberBtn(event)"> </td>
+          </tr>
+          <tr>
+            <td><input type="button" value="c" onclick="clr()" class="clear" /> </td>
+            <td><input type="button" value="0" onclick="display('0')"
+              onkeydown="numberBtn(event)"> </td>
+            <td><input type="button" value="." onclick="display('.')"
+              onkeydown="numberBtn(event)"> </td>
+            <td><input type="button" value="=" onclick="solve()" class="equals"> </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer>
+    <p>
+      Copyright ©
+      <script>document.write(new Date().getFullYear())</script>
+      alyssaweiglein
+    </p>
+    <a href="https://github.com/arw-works/calculator" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+  </footer>
 
   <script src="script.js"></script>
 </body>
